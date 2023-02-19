@@ -15,7 +15,7 @@ import axios from 'axios'
 import './assets/scss/style.scss';
 import config from './config';
 
-axios.defaults.baseURL = "http://localhost:5000/api";
+axios.defaults.baseURL = "https://blinkitssmart.store/api";
 axios.defaults.headers.post['Content-Type'] = 'application/json'; 
 axios.defaults.headers.post['Access-Control-Allow-Origin']='*';
 

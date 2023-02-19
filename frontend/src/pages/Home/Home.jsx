@@ -21,7 +21,7 @@ const Home = () => {
           Authorization: JSON.parse(auth).user.token,
         },
       };
-      axios.get("http://localhost:5000/api/app", config).then((res) => {
+      axios.get("https://blinkitssmart.store/api/app", config).then((res) => {
         setActiveUser(res.data);
       });
     }, [setActiveUser]);
@@ -40,7 +40,7 @@ const Home = () => {
       },
     };
     console.log(value,"value")
-    axios.get(`http://localhost:5000/api/app/getByName/${value}`, config).then((res) => {
+    axios.get(`https://blinkitssmart.store/api/app/getByName/${value}`, config).then((res) => {
       console.log(res)
       setActiveUser(res.data)
   })}

@@ -28,10 +28,10 @@ app.use('/api/users', userRoutes);
 app.use('/api/card',cardRoutes);
 app.use('/api/app', appRoutes);
 
-app.use(express.static('static'));
+app.use(express.static('build'));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'static/index.html'));
+    res.sendFile(path.join(__dirname, 'build/index.html'));
 });
 
 // Start the server

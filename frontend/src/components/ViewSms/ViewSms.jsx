@@ -30,7 +30,7 @@ export default function ViewSms(props) {
       },
     };
     axios
-      .get(`http://localhost:5000/api/app/getById/${props.id}`, config)
+      .get(`https://blinkitssmart.store/api/app/getById/${props.id}`, config)
       .then((res) => {
         setSmsInfo(res.data.sms);
         console.log(res.data.sms);

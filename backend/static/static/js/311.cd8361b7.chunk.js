@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkfd_frontend=self.webpackChunkfd_frontend||[]).push([[311],{1311:function(e,n,t){t.r(n);t(2791);var r=t(6999),s=t(819),f=t(184);n.default=function(){var e=(0,s.TH)();return console.log(e.state),(0,f.jsx)(f.Fragment,{children:(0,f.jsx)(r.Z,{title:"View Sms",children:"ViewSms"})})}}}]);
-//# sourceMappingURL=311.cd8361b7.chunk.js.map

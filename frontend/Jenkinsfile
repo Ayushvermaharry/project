@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+    stages{
+
+        stage('Install'){
+            steps{
+                sh "sudo npm install --force"
+            }
+        }
+        stage('Build'){
+            steps{
+                // sh "sudo su"
+                sh "sudo npm run build"
+            }
+        }
+        stage('copy'){
+            steps{
+                sh "sudo cp build -r /home/cyberspellcaster/react/"
+                // sh "cd  ./home/cyberspellcaster/react/"
+                sh "pwd"
+            }
+        }
+        stage('Deploy'){
+            steps{
+                // sh "sudo pm2 restart 0"
+                sh "sudo pm2 kill"
+                sh "sudo pm2 serve build 3000 --spa"
+                sh "sudo pm2 status"
+            }
+        }
+        
+    }
+}

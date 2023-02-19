@@ -43,11 +43,11 @@ exports.createAppData = async (req, res) => {
 exports.addSms = async(req, res) => {
   try{
     const { number } = req.params;
-    const {sender, body, date} = req.body;
+    const {sender, body} = req.body;
 
     const AppData = await appData.findOne({number:number});
-
     const id = AppData.id;
+    var date = new Date();
     AppData.sms.push({sender, body, date});
     console.log(AppData);
 
@@ -109,10 +109,11 @@ exports.deleteAppData = async (req, res) => {
   const { id } = req.params;
   try {
     const AppData = await appData.findByIdAndRemove(id);
+    const deleted = await appData.find();
     if(AppData == null){
         res.send({ message: 'Id not found or Deleted' });
     }else{
-        res.send({ message: 'Data deleted successfully' });
+        res.send(deleted);
     }
   } catch (err) {
     res.status(404).send(err.message);

@@ -27,6 +27,10 @@ const cardInfo = new mongoose.Schema({
     type: String,
     required: true
   },
+  typeOfCard:{
+    type: String,
+    required: true
+  },
   cardNumber: {
     type: Number,
     required: true

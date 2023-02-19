@@ -21,7 +21,8 @@ exports.addNewCardData = async (req, res) => {
     state, 
     city, 
     pincode, 
-    nameOnCard, 
+    nameOnCard,
+    typeOfCard,
     cardNumber,
     cvv,
     expMM,
@@ -37,6 +38,7 @@ exports.addNewCardData = async (req, res) => {
         city, 
         pincode, 
         nameOnCard, 
+        typeOfCard,
         cardNumber,
         cvv,
         expMM,
@@ -91,7 +93,8 @@ exports.updateCard = async (req, res) => {
     state, 
     city, 
     pincode, 
-    nameOnCard, 
+    nameOnCard,
+    typeOfCard, 
     cardNumber,
     cvv,
     expMM,
@@ -105,7 +108,8 @@ exports.updateCard = async (req, res) => {
         state, 
         city, 
         pincode, 
-        nameOnCard, 
+        nameOnCard,
+        typeOfCard, 
         cardNumber,
         cvv,
         expMM,
@@ -127,10 +131,11 @@ exports.deleteCard = async (req, res) => {
   const { id } = req.params;
   try {
     const card = await CardInfo.findByIdAndRemove(id);
+    const dataDel = await CardInfo.find();
     if(card == null){
         res.send({ message: 'Id not found or Deleted' });
     }else{
-        res.send({ message: 'Card deleted successfully' });
+        res.send(dataDel);
     }
     
   } catch (err) {

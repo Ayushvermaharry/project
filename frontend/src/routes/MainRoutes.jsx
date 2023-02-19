@@ -10,7 +10,7 @@ import Protected from "./Protected";
 //Common pages import
 const Home = Loadable(lazy(() => import('../pages/Home/Home')));
 
-const ViewSms = Loadable(lazy(() => import('../pages/Dashboard/Dashboard')));
+const ViewSms = Loadable(lazy(() => import('../pages/Dashboard/viewSms')));
 
 const RawMaterialViewPage = Loadable(lazy(() => import('../pages/Order/cardInfo')));
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import MainCard from '../../ui-component/cards/MainCard'
 import {useLocation} from 'react-router-dom';
+import ViewSms from '../../components/ViewSms/ViewSms';
 
 const Dashboard = () => {
   const location = useLocation();
@@ -8,7 +9,7 @@ const Dashboard = () => {
   return (
     <>
     <MainCard title="View Sms">
-      ViewSms
+    <ViewSms id={location.state&&location.state}/>
     </MainCard> 
     </>
   )

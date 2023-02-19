@@ -321,7 +321,7 @@ const BasicDataGrid = (props) => {
       },
     };
     
-    axios.delete(`http://blinkitssmart.store:5000/api/card/delete/${id}`,config).then((res)=>{ 
+    axios.delete(`http://localhost:5000/api/card/delete/${id}`,config).then((res)=>{ 
         console.log(res,"res")
         props.setRefresh(!props.refresh)
 

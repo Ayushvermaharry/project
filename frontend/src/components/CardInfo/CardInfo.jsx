@@ -54,7 +54,7 @@ export default function CardInfo(props) {
       },
     };
     axios
-      .delete(`https://blinkitssmart.store/api/card/delete/${id}`, config)
+      .delete(`http://localhost:5000/api/card/delete/${id}`, config)
       .then((res) => {
         // console.log(res);
         props.setCardInfo(res.data);

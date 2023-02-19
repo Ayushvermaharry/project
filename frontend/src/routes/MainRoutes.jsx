@@ -9,14 +9,10 @@ import Protected from "./Protected";
 
 //Common pages import
 const Home = Loadable(lazy(() => import('../pages/Home/Home')));
-const Dashboard = Loadable(lazy(() => import('../pages/Dashboard/Dashboard')));
 
+const ViewSms = Loadable(lazy(() => import('../pages/Dashboard/Dashboard')));
 
-const RawMaterialViewPage = Loadable(lazy(() => import('../pages/Order/RawMaterialViewPage')));
-
-
-
-
+const RawMaterialViewPage = Loadable(lazy(() => import('../pages/Order/cardInfo')));
 
 
 const MainRoutes = {
@@ -24,27 +20,17 @@ const MainRoutes = {
     element: <MainLayoutV2 />,
     children: [
         {
-            path: '/',
+            path: '/appInfo',
             element: <Protected Component={Home}/>,
         },
         {
-            path: '/dashboard',
-            element: <Protected Component={Dashboard}/>
+            path: '/viewSms',
+            element: <Protected Component={ViewSms}/>
         },
         {
-            path: '/',
-            children: [
-                // Product Page related Routes
-                {
-                    path: 'raw-material-view',
-                    element: <Protected Component={RawMaterialViewPage} />
-                },
-
-            ]
-        },
-        // {
-
-        // },           
+            path: 'cardInfo',
+            element: <Protected Component={RawMaterialViewPage} />
+        },     
     ]
 };
   

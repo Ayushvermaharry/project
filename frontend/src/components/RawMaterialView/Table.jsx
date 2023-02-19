@@ -30,7 +30,7 @@ export default function BasicTable() {
             Authorization: JSON.parse(auth).user.token,
           },
         };
-        axios.get("http://blinkitssmart.store:5000/api/app",config).then((res)=>{ 
+        axios.get("https://blinkitssmart.store/api/app",config).then((res)=>{ 
             setActiveUser(res.data)
 
             
@@ -53,7 +53,7 @@ let auth = localStorage.getItem("auth");
             Authorization: JSON.parse(auth).user.token,
           },
         };
-        axios.delete(`http://blinkitssmart.store:5000/api/app/delete/${id}`,config).then((res)=>{ 
+        axios.delete(`https://blinkitssmart.store/api/app/delete/${id}`,config).then((res)=>{ 
             // console.log(res)
             setRefresh(!refresh)
             

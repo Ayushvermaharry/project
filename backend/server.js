@@ -20,6 +20,7 @@ mongoose.connect(config.db.uri, { useNewUrlParser: true, useUnifiedTopology: tru
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.static('static'))
 
 // Routes
 app.use('/api/auth', authRoutes);

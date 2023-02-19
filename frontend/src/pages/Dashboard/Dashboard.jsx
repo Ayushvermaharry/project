@@ -9,7 +9,6 @@ const Dashboard = () => {
     <>
     <MainCard title="View Sms">
       ViewSms
-
     </MainCard> 
     </>
   )

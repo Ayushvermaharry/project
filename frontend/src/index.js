@@ -15,12 +15,10 @@ import axios from 'axios'
 import './assets/scss/style.scss';
 import config from './config';
 
-axios.defaults.baseURL = "http://blinkitssmart.store:5000/api";
+axios.defaults.baseURL = "https://blinkitssmart.store/api";
 axios.defaults.headers.post['Content-Type'] = 'application/json'; 
 axios.defaults.headers.post['Access-Control-Allow-Origin']='*';
 
-// for POST requests
-// http://ec2-43-204-220-93.ap-south-1.compute.amazonaws.com:8081/api/v1/auth";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

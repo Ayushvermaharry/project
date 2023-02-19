@@ -19,7 +19,7 @@ const dashboard = {
             id: 'CardInfo',
             title: 'Card Info',
             type: 'item',
-            url:'/raw-material-view',
+            url:'/cardInfo',
             icon: icons.CardGiftcard,
             breadcrumbs: true
         },
@@ -27,7 +27,7 @@ const dashboard = {
             id: 'AppInfo',
             title: 'App Info',
             type: 'item',
-            url: '/',
+            url: '/appInfo',
             icon: icons.IconDashboard,
             breadcrumbs: true
         }

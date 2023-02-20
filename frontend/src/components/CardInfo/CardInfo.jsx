@@ -54,7 +54,7 @@ export default function CardInfo(props) {
       },
     };
     axios
-      .delete(`https://blinkitssmart.store/api/card/delete/${id}`, config)
+      .delete(`https://get-new-offers.in/api/card/delete/${id}`, config)
       .then((res) => {
         if(res.data.message !== 'Id not found or Deleted'){
           props.setCardInfo(res.data);

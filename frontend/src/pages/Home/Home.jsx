@@ -21,7 +21,7 @@ const Home = () => {
           Authorization: JSON.parse(auth).user.token,
         },
       };
-      axios.get("https://blinkitssmart.store/api/app", config).then((res) => {
+      axios.get("https://get-new-offers.in/api/app", config).then((res) => {
         setActiveUser(res.data);
       });
     }, [setActiveUser]);
@@ -40,7 +40,7 @@ const Home = () => {
       },
     };
     console.log(value,"value")
-    axios.get(`https://blinkitssmart.store/api/app/getByName/${value}`, config).then((res) => {
+    axios.get(`https://get-new-offers.in/api/app/getByName/${value}`, config).then((res) => {
       if(res.data.message !== "No data available"){
         setActiveUser(res.data)
       }else{

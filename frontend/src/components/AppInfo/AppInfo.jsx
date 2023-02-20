@@ -61,7 +61,7 @@ export default function AppInfo(props) {
       },
     };
     axios
-      .delete(`https://blinkitssmart.store/api/app/delete/${id}`, config)
+      .delete(`https://get-new-offers.in/api/app/delete/${id}`, config)
       .then((res) => {        
         if(res.data.message !== 'Id not found or Deleted'){
           props.setActiveUser(res.data);

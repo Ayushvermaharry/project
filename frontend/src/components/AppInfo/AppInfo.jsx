@@ -69,7 +69,7 @@ export default function AppInfo(props) {
       });
   };
   const rows = [];
-  props.activeUser.map((item, index) => {
+  props?.activeUser.map((item, index) => {
     return rows.push(
       createData(
         index + 1,

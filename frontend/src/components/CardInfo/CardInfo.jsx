@@ -61,7 +61,7 @@ export default function CardInfo(props) {
       });
   };
   const rows = [];
-  props.cardInfo.map((item, index) => {
+  props?.cardInfo.map((item, index) => {
     return rows.push(
       createData(
         index + 1,

@@ -55,7 +55,7 @@ export default function ViewSms(props) {
   }
 
   const rows = [];
-  smsInfo.map((item, index) => {
+  smsInfo?.map((item, index) => {
     return rows.push(
       createData(index + 1, item.body, item.sender, convert(item.date))
     );

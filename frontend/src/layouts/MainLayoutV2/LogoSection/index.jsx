@@ -11,7 +11,7 @@ import Logo from '../../../ui-component/Logo'
 
 const LogoSection = () => (
     <ButtonBase disableRipple component={Link} to={config.defaultPath}>
-        {/* <Typography variant="h3" align='center' alignSelf='center' color="inherit" noWrap>FABRIL DIGITAL</Typography> */}
+        {/* <Typography variant="h3" align='center' alignSelf='center' color="inherit" noWrap>Fox CoderL</Typography> */}
         <Logo/>
     </ButtonBase>
 );

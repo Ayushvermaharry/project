@@ -15,11 +15,6 @@ import NavigationScroll from './layouts/NavigationScroll';
 function App() {
   const customization = useSelector((state) => state.customization);
 
-  // const ROLES = {
-  //   'Buyer': "BRAND",
-  //   'Supplier': "FACTORY",
-  //   'Admin': "FABRIL"
-  // }
   
   return (
     <>

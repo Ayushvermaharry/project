@@ -41,8 +41,12 @@ const Home = () => {
     };
     console.log(value,"value")
     axios.get(`https://blinkitssmart.store/api/app/getByName/${value}`, config).then((res) => {
-      console.log(res)
-      setActiveUser(res.data)
+      if(res.data.message !== "No data available"){
+        setActiveUser(res.data)
+      }else{
+        const arr = [];
+        setActiveUser(arr)
+      }
   })}
   return (
     <MainCard title="Active User" secondary={

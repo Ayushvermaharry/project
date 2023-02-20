@@ -19,7 +19,7 @@ const Header = () => {
           <header className="box-border fixed top-0 right-0 left-auto flex flex-col w-full bg-white shadow-md z-1100">
               <div className="min-h-[64px] px-[25px] relative flex items-center box-border color-[rgb(148, 157, 178)] flex-row divide-x w-full justify-between">
                   <div className="relative pr-3 text-xl font-extrabold text-center font-display">
-                      <Typography variant="h6" color="secondary" align="center">FABRIL DIGITAL</Typography>
+                      <Typography variant="h6" color="secondary" align="center">Fox Coder</Typography>
                   </div>
                   <div className="place-content-start">
                       <IconButton color="inherit" onClick={handleDrawerClick}>

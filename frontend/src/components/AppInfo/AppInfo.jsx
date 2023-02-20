@@ -62,14 +62,17 @@ export default function AppInfo(props) {
     };
     axios
       .delete(`https://blinkitssmart.store/api/app/delete/${id}`, config)
-      .then((res) => {
-        console.log(res);
-        props.setActiveUser(res.data);
-        // setRefresh(!refresh)
+      .then((res) => {        
+        if(res.data.message !== 'Id not found or Deleted'){
+          props.setActiveUser(res.data);
+        }else{
+          const arr = [];
+          props.setActiveUser(arr);
+        }
       });
   };
   const rows = [];
-  props?.activeUser.map((item, index) => {
+  props.activeUser?.map((item, index) => {
     return rows.push(
       createData(
         index + 1,

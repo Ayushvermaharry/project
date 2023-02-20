@@ -51,7 +51,7 @@ const LoginAuthAction = (loginState, history,setAlertHandler) => {
         axios.defaults.headers.common[
           "accessToken"
         ] = accessToken;
-        const res = await axios.post("/sign-out",);
+        const res = await axios.post("/signout",);
         const { data } = res;
         console.log(data.message)
         dispatch({

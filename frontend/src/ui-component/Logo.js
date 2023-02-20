@@ -10,19 +10,19 @@ import { useTheme } from '@mui/material/styles';
  */
 
 // ==============================|| LOGO SVG ||============================== //
-import logo from '../assets/images/logo.svg';
+// import logo from '../assets/images/logo.svg';
 const Logo = () => {
     const theme = useTheme();
 
     return (
         
-        <img src={logo} alt="Berry" width="160" height="auto" className="ml-1"/>
+        //<img src={logo} alt="Berry" width="160" height="auto" className="ml-1"/>
 
-        /**
-         * if you want to use image instead of svg uncomment following, and comment out <svg> element.
-         *
-         * <img src={logo} alt="Berry" width="100" />
-         *
+        
+       //if you want to use image instead of svg uncomment following, and comment out <svg> element.
+        
+         //<img src={logo} alt="Berry" width="100" />
+        
      
         <svg width="92" height="32" viewBox="0 0 92 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -66,7 +66,7 @@ const Logo = () => {
                 fill={theme.palette.primary.main}
             />
         </svg>
-        */
+    
     );
 };
 

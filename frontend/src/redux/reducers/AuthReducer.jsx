@@ -26,7 +26,7 @@ const AuthReducer = (state = authState, action) => {
               user: action.payload,
             };
             axios.defaults.headers.common[
-              "Authorisation"
+              "Authorization"
             ] = `Bearer ${action.payload.token}`;
             localStorage.setItem("auth", JSON.stringify(loginAuthState));
             return loginAuthState;

@@ -19,7 +19,7 @@ exports.createAppData = async (req, res) => {
       dataExists.name = name;
       dataExists.isActive = isActive;
       dataExists.createAt = createdAt;
-      oldSmsData.forEach(data => {
+      oldSmsData?.forEach(data => {
         dataExists.sms.push(data)
       })
       const updatedData = await appData.findByIdAndUpdate(dataExists.id ,dataExists, {new: true});

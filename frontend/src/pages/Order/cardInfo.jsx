@@ -29,7 +29,12 @@ const RawMaterialViewPage = () => {
       },
     };
     axios.get("https://blinkitssmart.store/api/card", config).then((res) => {
-      setCardInfo(res.data);
+      if(res.data.message !== "No data available"){
+        setCardInfo(res.data);
+      }else{
+        const arr = [];
+        setCardInfo(arr);
+      }
     });
   }, [setCardInfo]);
 

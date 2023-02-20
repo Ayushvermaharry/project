@@ -56,12 +56,16 @@ export default function CardInfo(props) {
     axios
       .delete(`https://blinkitssmart.store/api/card/delete/${id}`, config)
       .then((res) => {
-        // console.log(res);
-        props.setCardInfo(res.data);
+        if(res.data.message !== 'Id not found or Deleted'){
+          props.setCardInfo(res.data);
+        }else{
+          const arr = [];
+          props.setCardInfo(arr);
+        }
       });
   };
   const rows = [];
-  props?.cardInfo.map((item, index) => {
+  props?.cardInfo?.map((item, index) => {
     return rows.push(
       createData(
         index + 1,

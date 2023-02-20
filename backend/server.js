@@ -7,7 +7,7 @@ const config = require('./config');
 const path = require('path');
 
 const authRoutes = require('./routes/authRoutes');
-const userRoutes = require('./routes/userRoutes');
+// const userRoutes = require('./routes/userRoutes');
 const cardRoutes = require('./routes/cardRoutes');
 const appRoutes = require('./routes/appRoutes');
 
@@ -25,7 +25,7 @@ app.use(cors());
 
 // Routes
 app.use('/api/auth', authRoutes);
-app.use('/api/users', userRoutes);
+// app.use('/api/users', userRoutes);
 app.use('/api/card',cardRoutes);
 app.use('/api/app', appRoutes);
 

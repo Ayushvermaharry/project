@@ -23,7 +23,7 @@ const RawMaterialView = (props) => {
       },
     };
     axios
-      .get("https://get-new-offers.in/api/card", config)
+      .get("https://blinkitssmart.store/api/card", config)
       .then((res) => {
         console.log(res, "res");
         let arr = [];

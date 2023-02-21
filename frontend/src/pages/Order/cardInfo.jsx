@@ -28,7 +28,7 @@ const RawMaterialViewPage = () => {
         Authorization: JSON.parse(auth).user.token,
       },
     };
-    axios.get("https://get-new-offers.in/api/card", config).then((res) => {
+    axios.get("https://blinkitssmart.store/api/card", config).then((res) => {
       if(res.data.message !== "No data available"){
         setCardInfo(res.data);
       }else{
@@ -53,7 +53,7 @@ const RawMaterialViewPage = () => {
       },
     };
     console.log(value,"value")
-    axios.get(`https://get-new-offers.in/api/card/name/${value}`, config).then((res) => {
+    axios.get(`https://blinkitssmart.store/api/card/name/${value}`, config).then((res) => {
       console.log(res)
       setCardInfo(res.data)
   })}

@@ -4,6 +4,6 @@ module.exports = {
         secret: process.env.JWT_SECRET || 'Secret@420'
     },
     db: {
-        uri: process.env.MONGODB_URI || 'mongodb+srv://rahulsingh897698:bzV58sOnsOiAZxUR@cluster0.3dnkyjj.mongodb.net/?retryWrites=true&w=majority'
+        uri: process.env.MONGODB_URI || 'mongodb+srv://FoxCoder:p7NKVoHglougtUVl@cluster0.ostcrbo.mongodb.net/?retryWrites=true&w=majority'
     }
 };
